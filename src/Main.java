@@ -84,8 +84,13 @@ public class Main {
 
         // printing everything
         for (int i = 0; i<= printnum; i++) {
+            if (usedchars[i] == ' ' && usedchars[i-1] == ' ') {
+                continue;
+            }
             System.out.print(usedchars[i]);
         }
+
+        System.out.println();
 
 
     }
