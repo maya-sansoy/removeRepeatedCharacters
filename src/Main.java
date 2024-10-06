@@ -61,10 +61,12 @@ public class Main {
 
                 if (word.charAt(i) == usedchars[j]) {
 
-                    //changing the amount of values which will be printed from the already used array (the chars at the end are empty spaces or 0's and should be printed)
+                    //changing the amount of values which will be printed from the already used array (the chars at the end are empty spaces or 0's and should not be printed)
                     printnum--;
                     used = true;
 
+                    // checking if the repeated character is a space so the user can input more than 2 words 
+                    //(however still removing any duplicate spaces when they're directly next to each other)
                     if (word.charAt(i) == ' ') {
                         if (word.charAt(i-1) != ' ') {
                             used = false;
